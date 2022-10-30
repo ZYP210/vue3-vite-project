@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "dbaeumer.vscode-eslint", // 脚本代码检查
+    "stylelint.vscode-stylelint", // css格式化
+    "esbenp.prettier-vscode", // 代码格式化
+    "mrmlnc.vscode-less", //
+    "lokalise.i18n-ally", //  i18n 插件
+    "antfu.iconify", // iconify图标插件
+    "mikestead.dotenv" // env文件高亮
+  ]
+}

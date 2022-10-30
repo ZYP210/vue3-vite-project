@@ -1,0 +1,51 @@
+@-webkit-keyframes enter-x-animation {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes enter-x-animation {
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@-webkit-keyframes enter-y-animation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enter-y-animation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.enter-x {
+  z-index: 9;
+  opacity: 0;
+  animation: enter-x-animation 0.4s ease-in-out 0.3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+
+  &-normal {
+    z-index: 8;
+    opacity: 0;
+    animation: enter-x-animation 0.4s ease-in-out 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+  }
+
+  &-slow {
+    z-index: 7;
+    opacity: 0;
+    animation: enter-x-animation 0.4s ease-in-out 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+  }
+}

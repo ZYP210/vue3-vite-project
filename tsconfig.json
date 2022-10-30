@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    "allowJs": true, // 允许编译javascript文件
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "baseUrl": ".", // 解析非相对模块名的基准目录。
+    "esModuleInterop": true,
+    "experimentalDecorators": true, // 启用实验性的装饰器
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用。
+    "isolatedModules": true,
+    "jsx": "preserve", // 在 .tsx文件里支持JSX
+    "lib": [
+      // 告诉编译器在运行编译代码时哪些语言功能可用
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext", // 指定生成哪个模块系统代码
+    "moduleResolution": "Node", // 决定如何处理模块
+    "noLib": false, // 不包含默认的库文件（ lib.d.ts）
+    "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错。
+    "noUnusedLocals": true, // 若有未使用的变量则抛错
+    "noUnusedParameters": false, // 若有未使用的参数则抛错
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./public/*"
+      ],
+      "#/*": [
+        "./types/*"
+      ]
+    },
+    "resolveJsonModule": true, // 允许导入带有".json"扩展名的模块。
+    "removeComments": true, // 删除所有注释，除了以 /!*开头的版权信息。
+    "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+    "sourceMap": true, // 生成相应的.map文件
+    "strict": true, // 严格模式
+    "strictNullChecks": true, // 在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值（有个例外， undefined可以赋值到 void）。
+    "strictFunctionTypes": false, // 严格函数类型检查
+    "target": "ESNext", // 指定ECMAScript目标版本
+    "types": [
+      "vite/client",
+      "node"
+    ], // 要包含的类型声明文件名列表
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types"
+    ],
+    "useDefineForClassFields": true // 对类字段使用定义
+  },
+  "include": [
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*..ts",
+    "types/**/*.d.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "auto-imports.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "dist",
+    "src/tests/**/*"
+  ]
+}
