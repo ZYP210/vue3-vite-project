@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import { useGlobalConfig } from "@/hooks/config/useGlobalConfig";
-const { VITE_GLOB_LOGIN_TITLE = "" } = useGlobalConfig();
+const { VITE_GLOB_LOGIN_TITLE } = useGlobalConfig();
 </script>
 
 <style scoped lang="less">
