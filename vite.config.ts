@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from "node:url";
 import type { UserConfigExport, ConfigEnv } from "vite";
 import { defineConfig, loadEnv } from "vite";
-import { wrapperEnv, createProxy } from "./src/utils/dev";
+import { createProxy, parseEnv } from "./src/utils/dev";
 import { genGlobalEnv } from "./scripts";
 import { createVitePlugins } from "./scripts/vite/plugins";
 
@@ -10,11 +10,11 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
   const root = process.cwd();
 
   const env = loadEnv(mode, root);
-
-  const viteEnv = wrapperEnv(env);
+  
+  //格式化env
+  const viteEnv = parseEnv(env);
 
   const isBuild = command === "build";
-
   //脚本生成配置文件js
   genGlobalEnv(viteEnv);
 
