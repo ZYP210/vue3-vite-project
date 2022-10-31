@@ -10,6 +10,7 @@
       <div class="login-right">
         <div class="login-main">
           <p class="login-title enter-x">登录</p>
+          <UserLoginVue />
         </div>
       </div>
     </div>
@@ -17,6 +18,7 @@
 </template>
 
 <script setup lang="ts">
+import UserLoginVue from "./UserLogin.vue";
 import { useGlobalConfig } from "@/hooks/config/useGlobalConfig";
 const { VITE_GLOB_LOGIN_TITLE } = useGlobalConfig();
 </script>
