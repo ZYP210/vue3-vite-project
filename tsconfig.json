@@ -57,8 +57,8 @@
     "src/**/*.vue",
     "types/**/*..ts",
     "types/**/*.d.ts",
-    "build/**/*.ts",
-    "build/**/*.d.ts",
+    "scripts/**/*.ts",
+    "scripts/**/*.d.ts",
     "auto-imports.d.ts",
     "vite.config.ts"
   ],

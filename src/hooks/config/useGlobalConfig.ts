@@ -1,4 +1,4 @@
-import { getGlobalEnvConfig } from "../../../scripts/genGlobalEnv";
+import { getGlobalEnvConfig } from "../../../scripts";
 const { prefixName } = getGlobalEnvConfig();
 const config = window?.[prefixName] || {};
 console.log(window[prefixName]);
