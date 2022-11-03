@@ -31,6 +31,8 @@
 <script setup lang="ts" name="UserLogin">
 import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
 import { Form } from "ant-design-vue";
+
+const router = useRouter();
 const useForm = Form.useForm;
 const labelCol = { span: 4 };
 const wrapperCol = { span: 14 };
@@ -69,7 +71,7 @@ const onSubmit = () => {
     });
 };
 const handleLogin = () => {
-  console.log("lalala");
+  router.push("/home");
 };
 </script>
 
